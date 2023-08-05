@@ -15,6 +15,6 @@ public class OrderResponse {
     private Long paymentPrice;
 
     public static OrderResponse of(final Order order) {
-        return new OrderResponse(order.getProductUuid(), order.getPaymentPrice());
+        return new OrderResponse(order.getProductName(), order.getPaymentPrice());
     }
 }

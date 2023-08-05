@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 public class OrderHistory {
 
     private Long memberId;
-    private String menuId;
+    private String productName;
     private Long paymentPrice;
 
 }

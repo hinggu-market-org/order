@@ -23,21 +23,21 @@ public class Order {
 
     private Long memberId;
 
-    private String productUuid;
+    private String productName;
 
     private Long paymentPrice;
 
     private LocalDateTime createdTime;
 
-    public Order(final String productUuid, final Long paymentPrice) {
-        this.productUuid = productUuid;
+    public Order(final String productName, final Long paymentPrice) {
+        this.productName = productName;
         this.paymentPrice = paymentPrice;
         this.createdTime = LocalDateTime.now();
     }
 
-    public Order(final Long memberId, final String productUuid, final Long paymentPrice) {
+    public Order(final Long memberId, final String productName, final Long paymentPrice) {
         this.memberId = memberId;
-        this.productUuid = productUuid;
+        this.productName = productName;
         this.paymentPrice = paymentPrice;
         this.createdTime = LocalDateTime.now();
     }
