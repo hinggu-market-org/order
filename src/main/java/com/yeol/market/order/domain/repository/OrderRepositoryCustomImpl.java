@@ -16,11 +16,11 @@ public class OrderRepositoryCustomImpl implements OrderRepositoryCustom {
     @Override
     public List<String> findTop3ByCount() {
         final LocalDateTime now = LocalDateTime.now();
-        return jpaQueryFactory.select(order.productUuid)
+        return jpaQueryFactory.select(order.productName)
                 .from(order)
                 .where(order.createdTime.between(now.minusDays(7), now))
-                .groupBy(order.productUuid)
-                .orderBy(order.productUuid.count().desc())
+                .groupBy(order.productName)
+                .orderBy(order.productName.count().desc())
                 .limit(3)
                 .fetch();
     }
